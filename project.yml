@@ -1,0 +1,46 @@
+name: BusBroadcaster
+options:
+  bundleIdPrefix: com.busbroadcaster
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16"
+  createIntermediateGroups: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    ENABLE_HARDENED_RUNTIME: YES
+    SWIFT_STRICT_CONCURRENCY: minimal
+
+targets:
+  BusBroadcaster:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: BusBroadcaster
+        excludes:
+          - Info.plist
+          - "Assets/**"
+    resources:
+      - path: BusBroadcaster/Assets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.busbroadcaster.BusBroadcaster
+        INFOPLIST_FILE: BusBroadcaster/Info.plist
+        SWIFT_VERSION: "5.9"
+        SWIFT_STRICT_CONCURRENCY: minimal
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+    info:
+      path: BusBroadcaster/Info.plist
+      properties:
+        CFBundleDisplayName: BusBroadcaster
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        LSMinimumSystemVersion: "$(MACOSX_DEPLOYMENT_TARGET)"
+        NSPrincipalClass: NSApplication
+        NSHumanReadableCopyright: ""
+        LSApplicationCategoryType: public.app-category.games

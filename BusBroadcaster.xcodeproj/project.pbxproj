@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0082E564B3F23C3CD95A406D /* MoodRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC571C9D40F63AA304A60ED8 /* MoodRegistry.swift */; };
+		0B7C5A45CDE2134FEBEF811B /* MoodState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0D42F2AD39EF982DBE402 /* MoodState.swift */; };
+		0C65EFFAC319FE5D602D18BB /* Prophet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D417AE360BB53F866CB7979 /* Prophet.swift */; };
+		23291264BF6A68BB9C4D138A /* BusBroadcasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD054F96B9E1D499A058929 /* BusBroadcasterApp.swift */; };
+		32269AEF3F11B7B15DC7E700 /* Nadia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D2EB434ABAB8FAE0140C8D /* Nadia.swift */; };
+		42C01DAE8C6B4AB7F0E2ACD0 /* KoboldAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5F6927A87D1A7559E89D7 /* KoboldAI.swift */; };
+		487A0E052774C50FB86F9D70 /* Soren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B0678614BF49FD46D90C6C /* Soren.swift */; };
+		58033A6340BC7A94DBAA9579 /* Yael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C22B2B861C0DA3739E5321 /* Yael.swift */; };
+		5C2DD7378C4796AEACD64FEB /* Dolores.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57DD9B8997546AE894FD915 /* Dolores.swift */; };
+		5E31B060DC92328DA89D1D70 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D01E678D1639B448D1C443 /* GameState.swift */; };
+		7FB6328E08A8953C693CF3B2 /* Marcus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFD29485777B1356E31EC6 /* Marcus.swift */; };
+		811D05544743AF43CCF6BBB9 /* ChatPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D923D3D4C443186A88BFD4 /* ChatPanelView.swift */; };
+		85ED7C12A54336A1FDB4164E /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FB4009ACECB1D4A74B3E2 /* ChatMessage.swift */; };
+		88D0947FDE84983AB34270B9 /* MoodLegacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E2205F43271DED286CDD0 /* MoodLegacy.swift */; };
+		9051E431DC2E6337CDA72B03 /* KoboldSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0781BEDD36AA40BCE804252 /* KoboldSession.swift */; };
+		92819E8D3C988EC07DD3C4B9 /* GameStateBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448055143C8BD14C4BB87BD /* GameStateBridge.swift */; };
+		A1E9F502B067577A3F8D8582 /* MoodEngineStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443AF7734846384182AE339E /* MoodEngineStub.swift */; };
+		A7549F4497846E5A2EE6896F /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8F3FF26F6184ABDE196AA /* SceneView.swift */; };
+		AB29296A90BA6A78C84039B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB24E0249A254C4D610CD8 /* ContentView.swift */; };
+		AEC1249C2DCE0EDF761A345C /* CharacterSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E040DCFBEB73087B892FD1 /* CharacterSprite.swift */; };
+		BC9137D2FE3EFEA2F6198EE1 /* AgentCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52388778E4461D0F0D9721B /* AgentCharacter.swift */; };
+		C5F538933888B517B41FB4F7 /* MoodIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54539035B517D8BEFD45D /* MoodIndicatorView.swift */; };
+		D80E106320B2CAB8888BA083 /* KoboldOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3030DD9B409F646296452 /* KoboldOverlay.swift */; };
+		DD0050AF7B5E02C51DC96FDD /* Priya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D797AA288A80A1028B0F2 /* Priya.swift */; };
+		DFFA502034BA6831945D84A2 /* ApfelSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACE559B90DB0E0681E6FA7 /* ApfelSession.swift */; };
+		EE0B6DE1C0B2744E525145B2 /* BehavioralAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDB45AD13CA02B0E4D9DFA /* BehavioralAnalyzer.swift */; };
+		F2570134D58864D96A6198FF /* DetectiveMorrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC01C372090C7F39FBCFDF3 /* DetectiveMorrow.swift */; };
+		F2626238D12AC6EAE2B953D3 /* Felix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E0391818F8572C037566F0 /* Felix.swift */; };
+		F2C1582894DE933106CC3FF1 /* TurnQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0715302A8F07C72619C5CB7 /* TurnQueue.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		035FB4009ACECB1D4A74B3E2 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		2AD054F96B9E1D499A058929 /* BusBroadcasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusBroadcasterApp.swift; sourceTree = "<group>"; };
+		2DBB24E0249A254C4D610CD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		30E040DCFBEB73087B892FD1 /* CharacterSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSprite.swift; sourceTree = "<group>"; };
+		34B0678614BF49FD46D90C6C /* Soren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soren.swift; sourceTree = "<group>"; };
+		38DFD29485777B1356E31EC6 /* Marcus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marcus.swift; sourceTree = "<group>"; };
+		443AF7734846384182AE339E /* MoodEngineStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEngineStub.swift; sourceTree = "<group>"; };
+		523D797AA288A80A1028B0F2 /* Priya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priya.swift; sourceTree = "<group>"; };
+		56D923D3D4C443186A88BFD4 /* ChatPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPanelView.swift; sourceTree = "<group>"; };
+		6BC01C372090C7F39FBCFDF3 /* DetectiveMorrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectiveMorrow.swift; sourceTree = "<group>"; };
+		6D417AE360BB53F866CB7979 /* Prophet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prophet.swift; sourceTree = "<group>"; };
+		7AA8F3FF26F6184ABDE196AA /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		82C22B2B861C0DA3739E5321 /* Yael.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yael.swift; sourceTree = "<group>"; };
+		82D01E678D1639B448D1C443 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		86D5F6927A87D1A7559E89D7 /* KoboldAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoboldAI.swift; sourceTree = "<group>"; };
+		87221AE2BDE1CBEA9A129545 /* BusBroadcaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusBroadcaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		89E3030DD9B409F646296452 /* KoboldOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoboldOverlay.swift; sourceTree = "<group>"; };
+		A52388778E4461D0F0D9721B /* AgentCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentCharacter.swift; sourceTree = "<group>"; };
+		B0781BEDD36AA40BCE804252 /* KoboldSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoboldSession.swift; sourceTree = "<group>"; };
+		BE4E2205F43271DED286CDD0 /* MoodLegacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLegacy.swift; sourceTree = "<group>"; };
+		C0715302A8F07C72619C5CB7 /* TurnQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnQueue.swift; sourceTree = "<group>"; };
+		D0EDB45AD13CA02B0E4D9DFA /* BehavioralAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehavioralAnalyzer.swift; sourceTree = "<group>"; };
+		E57DD9B8997546AE894FD915 /* Dolores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dolores.swift; sourceTree = "<group>"; };
+		E7E0391818F8572C037566F0 /* Felix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Felix.swift; sourceTree = "<group>"; };
+		EBD0D42F2AD39EF982DBE402 /* MoodState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodState.swift; sourceTree = "<group>"; };
+		ECACE559B90DB0E0681E6FA7 /* ApfelSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApfelSession.swift; sourceTree = "<group>"; };
+		F3D2EB434ABAB8FAE0140C8D /* Nadia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nadia.swift; sourceTree = "<group>"; };
+		F448055143C8BD14C4BB87BD /* GameStateBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateBridge.swift; sourceTree = "<group>"; };
+		FBE54539035B517D8BEFD45D /* MoodIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodIndicatorView.swift; sourceTree = "<group>"; };
+		FC571C9D40F63AA304A60ED8 /* MoodRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRegistry.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		21FDFFF72549C021BC4575D2 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				035FB4009ACECB1D4A74B3E2 /* ChatMessage.swift */,
+				56D923D3D4C443186A88BFD4 /* ChatPanelView.swift */,
+				C0715302A8F07C72619C5CB7 /* TurnQueue.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		4DC589C2B8955E263D06DC89 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2AD054F96B9E1D499A058929 /* BusBroadcasterApp.swift */,
+				2DBB24E0249A254C4D610CD8 /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		53EA6B30C4C297372C8D6D50 /* BusBroadcaster */ = {
+			isa = PBXGroup;
+			children = (
+				E8C4713F72F3294B09A602F0 /* Agents */,
+				4DC589C2B8955E263D06DC89 /* App */,
+				21FDFFF72549C021BC4575D2 /* Chat */,
+				FE69AEB1C2C7CDB9BBC68EFB /* GameState */,
+				F3B2D33CF15A6F9A0C681BCD /* Scene */,
+				82CE00AE1D47880251115F5D /* SoulForge */,
+			);
+			path = BusBroadcaster;
+			sourceTree = "<group>";
+		};
+		82CE00AE1D47880251115F5D /* SoulForge */ = {
+			isa = PBXGroup;
+			children = (
+				D0EDB45AD13CA02B0E4D9DFA /* BehavioralAnalyzer.swift */,
+				FBE54539035B517D8BEFD45D /* MoodIndicatorView.swift */,
+				FC571C9D40F63AA304A60ED8 /* MoodRegistry.swift */,
+				EBD0D42F2AD39EF982DBE402 /* MoodState.swift */,
+			);
+			path = SoulForge;
+			sourceTree = "<group>";
+		};
+		8AD87F5D59712541F7A7A673 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				6BC01C372090C7F39FBCFDF3 /* DetectiveMorrow.swift */,
+				E57DD9B8997546AE894FD915 /* Dolores.swift */,
+				E7E0391818F8572C037566F0 /* Felix.swift */,
+				86D5F6927A87D1A7559E89D7 /* KoboldAI.swift */,
+				38DFD29485777B1356E31EC6 /* Marcus.swift */,
+				F3D2EB434ABAB8FAE0140C8D /* Nadia.swift */,
+				523D797AA288A80A1028B0F2 /* Priya.swift */,
+				6D417AE360BB53F866CB7979 /* Prophet.swift */,
+				34B0678614BF49FD46D90C6C /* Soren.swift */,
+				82C22B2B861C0DA3739E5321 /* Yael.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		C7BF754A498C549D8C6AB283 = {
+			isa = PBXGroup;
+			children = (
+				53EA6B30C4C297372C8D6D50 /* BusBroadcaster */,
+				EA124B8E11E4A63DAA1EF29A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E8C4713F72F3294B09A602F0 /* Agents */ = {
+			isa = PBXGroup;
+			children = (
+				8AD87F5D59712541F7A7A673 /* Characters */,
+				A52388778E4461D0F0D9721B /* AgentCharacter.swift */,
+				ECACE559B90DB0E0681E6FA7 /* ApfelSession.swift */,
+				B0781BEDD36AA40BCE804252 /* KoboldSession.swift */,
+			);
+			path = Agents;
+			sourceTree = "<group>";
+		};
+		EA124B8E11E4A63DAA1EF29A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87221AE2BDE1CBEA9A129545 /* BusBroadcaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3B2D33CF15A6F9A0C681BCD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				30E040DCFBEB73087B892FD1 /* CharacterSprite.swift */,
+				89E3030DD9B409F646296452 /* KoboldOverlay.swift */,
+				7AA8F3FF26F6184ABDE196AA /* SceneView.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		FE69AEB1C2C7CDB9BBC68EFB /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				82D01E678D1639B448D1C443 /* GameState.swift */,
+				F448055143C8BD14C4BB87BD /* GameStateBridge.swift */,
+				443AF7734846384182AE339E /* MoodEngineStub.swift */,
+				BE4E2205F43271DED286CDD0 /* MoodLegacy.swift */,
+			);
+			path = GameState;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0093A7E6B64AF66CAAE46B79 /* BusBroadcaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF20699F38A123503B5F6EFE /* Build configuration list for PBXNativeTarget "BusBroadcaster" */;
+			buildPhases = (
+				A1056E8D6D2F673323BC487E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BusBroadcaster;
+			packageProductDependencies = (
+			);
+			productName = BusBroadcaster;
+			productReference = 87221AE2BDE1CBEA9A129545 /* BusBroadcaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48A4BA9E38D44D7085EAD2A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0093A7E6B64AF66CAAE46B79 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2148E421FFCAAE1702EFA78D /* Build configuration list for PBXProject "BusBroadcaster" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C7BF754A498C549D8C6AB283;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EA124B8E11E4A63DAA1EF29A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0093A7E6B64AF66CAAE46B79 /* BusBroadcaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1056E8D6D2F673323BC487E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9137D2FE3EFEA2F6198EE1 /* AgentCharacter.swift in Sources */,
+				DFFA502034BA6831945D84A2 /* ApfelSession.swift in Sources */,
+				EE0B6DE1C0B2744E525145B2 /* BehavioralAnalyzer.swift in Sources */,
+				23291264BF6A68BB9C4D138A /* BusBroadcasterApp.swift in Sources */,
+				AEC1249C2DCE0EDF761A345C /* CharacterSprite.swift in Sources */,
+				85ED7C12A54336A1FDB4164E /* ChatMessage.swift in Sources */,
+				811D05544743AF43CCF6BBB9 /* ChatPanelView.swift in Sources */,
+				AB29296A90BA6A78C84039B9 /* ContentView.swift in Sources */,
+				F2570134D58864D96A6198FF /* DetectiveMorrow.swift in Sources */,
+				5C2DD7378C4796AEACD64FEB /* Dolores.swift in Sources */,
+				F2626238D12AC6EAE2B953D3 /* Felix.swift in Sources */,
+				5E31B060DC92328DA89D1D70 /* GameState.swift in Sources */,
+				92819E8D3C988EC07DD3C4B9 /* GameStateBridge.swift in Sources */,
+				42C01DAE8C6B4AB7F0E2ACD0 /* KoboldAI.swift in Sources */,
+				D80E106320B2CAB8888BA083 /* KoboldOverlay.swift in Sources */,
+				9051E431DC2E6337CDA72B03 /* KoboldSession.swift in Sources */,
+				7FB6328E08A8953C693CF3B2 /* Marcus.swift in Sources */,
+				A1E9F502B067577A3F8D8582 /* MoodEngineStub.swift in Sources */,
+				C5F538933888B517B41FB4F7 /* MoodIndicatorView.swift in Sources */,
+				88D0947FDE84983AB34270B9 /* MoodLegacy.swift in Sources */,
+				0082E564B3F23C3CD95A406D /* MoodRegistry.swift in Sources */,
+				0B7C5A45CDE2134FEBEF811B /* MoodState.swift in Sources */,
+				32269AEF3F11B7B15DC7E700 /* Nadia.swift in Sources */,
+				DD0050AF7B5E02C51DC96FDD /* Priya.swift in Sources */,
+				0C65EFFAC319FE5D602D18BB /* Prophet.swift in Sources */,
+				A7549F4497846E5A2EE6896F /* SceneView.swift in Sources */,
+				487A0E052774C50FB86F9D70 /* Soren.swift in Sources */,
+				F2C1582894DE933106CC3FF1 /* TurnQueue.swift in Sources */,
+				58033A6340BC7A94DBAA9579 /* Yael.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		38986E5B8B122A766FC1F18D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = BusBroadcaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.busbroadcaster.BusBroadcaster;
+				SDKROOT = macosx;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		5150962F6A2A4487BCC88C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		5BE950E661D9EC9B43A512F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		6F03850E25AEFC11F6E5F666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = BusBroadcaster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.busbroadcaster.BusBroadcaster;
+				SDKROOT = macosx;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2148E421FFCAAE1702EFA78D /* Build configuration list for PBXProject "BusBroadcaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5150962F6A2A4487BCC88C5B /* Debug */,
+				5BE950E661D9EC9B43A512F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CF20699F38A123503B5F6EFE /* Build configuration list for PBXNativeTarget "BusBroadcaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38986E5B8B122A766FC1F18D /* Debug */,
+				6F03850E25AEFC11F6E5F666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48A4BA9E38D44D7085EAD2A3 /* Project object */;
+}
