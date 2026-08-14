@@ -8,30 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		0082E564B3F23C3CD95A406D /* MoodRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC571C9D40F63AA304A60ED8 /* MoodRegistry.swift */; };
+		076EE530D5A4CEE2EDEA116A /* WorkPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB270FAA35BBCC279343CA6 /* WorkPanelView.swift */; };
 		0B7C5A45CDE2134FEBEF811B /* MoodState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0D42F2AD39EF982DBE402 /* MoodState.swift */; };
+		0B9066F3B07EBBE9F58F25D5 /* ViewerMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2AECA25328F6E77B5BD58 /* ViewerMessage.swift */; };
+		0C21BC4DF4F2D5CB38F99BEC /* TopMenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA96AFA8BA99269D608CCF /* TopMenuBarView.swift */; };
 		0C65EFFAC319FE5D602D18BB /* Prophet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D417AE360BB53F866CB7979 /* Prophet.swift */; };
+		195212AF4CC41959B1ADE3D9 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC0787E2BE7904DF01695DA /* VideoPlayerView.swift */; };
+		210B9DE4C89E2C3C1E9E4F62 /* StoryMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8034A643CD20727B49D0B780 /* StoryMemory.swift */; };
 		23291264BF6A68BB9C4D138A /* BusBroadcasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD054F96B9E1D499A058929 /* BusBroadcasterApp.swift */; };
+		2E8C1FEB0F4B402C8EAA47EF /* BroadcastWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D57EFFACE40EDD4E61173 /* BroadcastWindowView.swift */; };
+		2FB709DDA1DAC1E85F8AE94B /* TwitchKeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18E3064F3187D09B827B39 /* TwitchKeychainStore.swift */; };
 		32269AEF3F11B7B15DC7E700 /* Nadia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D2EB434ABAB8FAE0140C8D /* Nadia.swift */; };
+		35E55A1E73D06F7DF0A6A093 /* Governor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECB21FC8EB4A81FCC600072 /* Governor.swift */; };
 		42C01DAE8C6B4AB7F0E2ACD0 /* KoboldAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5F6927A87D1A7559E89D7 /* KoboldAI.swift */; };
+		45CD470C79C8EF43C2038640 /* TwitchChatBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE2540438A2F3C195C2EC21 /* TwitchChatBridge.swift */; };
 		487A0E052774C50FB86F9D70 /* Soren.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B0678614BF49FD46D90C6C /* Soren.swift */; };
+		490DF7F01BBB11D0A9A04F23 /* BusPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB0BAEFBBEFB0AC4E5D0864 /* BusPlayer.swift */; };
+		4F4409BFD539EAB18053B949 /* WorkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7137453B9897CDD7C131FA4 /* WorkActivity.swift */; };
 		58033A6340BC7A94DBAA9579 /* Yael.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C22B2B861C0DA3739E5321 /* Yael.swift */; };
 		5C2DD7378C4796AEACD64FEB /* Dolores.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57DD9B8997546AE894FD915 /* Dolores.swift */; };
 		5E31B060DC92328DA89D1D70 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D01E678D1639B448D1C443 /* GameState.swift */; };
+		61373224764602EADFBA3585 /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE59A5351034C59CBB9E3 /* SpeechManager.swift */; };
+		78C2A58EA50603CBDD59329F /* KoboldControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E97B1D422E72DF49E90680A /* KoboldControlPanel.swift */; };
+		793D68466C8181FCC17F9958 /* ContentFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229283C7A7200D697BFC467A /* ContentFetcher.swift */; };
+		7A83BA8C06742437CDACBF51 /* PhraseBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C8EA094201C5EBDAC9DBB7 /* PhraseBank.swift */; };
 		7FB6328E08A8953C693CF3B2 /* Marcus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFD29485777B1356E31EC6 /* Marcus.swift */; };
 		811D05544743AF43CCF6BBB9 /* ChatPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D923D3D4C443186A88BFD4 /* ChatPanelView.swift */; };
 		85ED7C12A54336A1FDB4164E /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035FB4009ACECB1D4A74B3E2 /* ChatMessage.swift */; };
 		88D0947FDE84983AB34270B9 /* MoodLegacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4E2205F43271DED286CDD0 /* MoodLegacy.swift */; };
+		8A74625E9E4143046E40FCB9 /* TwitchConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74479919F919BF7F78E37A3F /* TwitchConfigView.swift */; };
 		9051E431DC2E6337CDA72B03 /* KoboldSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0781BEDD36AA40BCE804252 /* KoboldSession.swift */; };
 		92819E8D3C988EC07DD3C4B9 /* GameStateBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448055143C8BD14C4BB87BD /* GameStateBridge.swift */; };
 		A1E9F502B067577A3F8D8582 /* MoodEngineStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443AF7734846384182AE339E /* MoodEngineStub.swift */; };
+		A58345DB2936C9C0E8061EE0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9187FAB8171377596393D56 /* Security.framework */; };
+		A5E59176C0EEA6C21CA4D2DA /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E354D79F2537EC88E674249 /* Network.framework */; };
 		A7549F4497846E5A2EE6896F /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8F3FF26F6184ABDE196AA /* SceneView.swift */; };
 		AB29296A90BA6A78C84039B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBB24E0249A254C4D610CD8 /* ContentView.swift */; };
 		AEC1249C2DCE0EDF761A345C /* CharacterSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E040DCFBEB73087B892FD1 /* CharacterSprite.swift */; };
 		BC9137D2FE3EFEA2F6198EE1 /* AgentCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52388778E4461D0F0D9721B /* AgentCharacter.swift */; };
 		C5F538933888B517B41FB4F7 /* MoodIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE54539035B517D8BEFD45D /* MoodIndicatorView.swift */; };
+		D19597D0CB4C305B3EB44D91 /* InternalCommView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83B342EBF06780B8E21C23 /* InternalCommView.swift */; };
 		D80E106320B2CAB8888BA083 /* KoboldOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3030DD9B409F646296452 /* KoboldOverlay.swift */; };
 		DD0050AF7B5E02C51DC96FDD /* Priya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D797AA288A80A1028B0F2 /* Priya.swift */; };
 		DFFA502034BA6831945D84A2 /* ApfelSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECACE559B90DB0E0681E6FA7 /* ApfelSession.swift */; };
+		E1C84004791609DC0809A61B /* KoboldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7978723C9CDBCB97364C99 /* KoboldItem.swift */; };
 		EE0B6DE1C0B2744E525145B2 /* BehavioralAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EDB45AD13CA02B0E4D9DFA /* BehavioralAnalyzer.swift */; };
 		F2570134D58864D96A6198FF /* DetectiveMorrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC01C372090C7F39FBCFDF3 /* DetectiveMorrow.swift */; };
 		F2626238D12AC6EAE2B953D3 /* Felix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E0391818F8572C037566F0 /* Felix.swift */; };
@@ -40,44 +60,85 @@
 
 /* Begin PBXFileReference section */
 		035FB4009ACECB1D4A74B3E2 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		15C8EA094201C5EBDAC9DBB7 /* PhraseBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseBank.swift; sourceTree = "<group>"; };
+		229283C7A7200D697BFC467A /* ContentFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFetcher.swift; sourceTree = "<group>"; };
+		28AA96AFA8BA99269D608CCF /* TopMenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuBarView.swift; sourceTree = "<group>"; };
 		2AD054F96B9E1D499A058929 /* BusBroadcasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusBroadcasterApp.swift; sourceTree = "<group>"; };
+		2CC0787E2BE7904DF01695DA /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		2D6D57EFFACE40EDD4E61173 /* BroadcastWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastWindowView.swift; sourceTree = "<group>"; };
 		2DBB24E0249A254C4D610CD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30E040DCFBEB73087B892FD1 /* CharacterSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSprite.swift; sourceTree = "<group>"; };
 		34B0678614BF49FD46D90C6C /* Soren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soren.swift; sourceTree = "<group>"; };
 		38DFD29485777B1356E31EC6 /* Marcus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marcus.swift; sourceTree = "<group>"; };
+		3AE2540438A2F3C195C2EC21 /* TwitchChatBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchChatBridge.swift; sourceTree = "<group>"; };
+		3B18E3064F3187D09B827B39 /* TwitchKeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchKeychainStore.swift; sourceTree = "<group>"; };
 		443AF7734846384182AE339E /* MoodEngineStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEngineStub.swift; sourceTree = "<group>"; };
+		4E97B1D422E72DF49E90680A /* KoboldControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoboldControlPanel.swift; sourceTree = "<group>"; };
+		4EB0BAEFBBEFB0AC4E5D0864 /* BusPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusPlayer.swift; sourceTree = "<group>"; };
 		523D797AA288A80A1028B0F2 /* Priya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priya.swift; sourceTree = "<group>"; };
 		56D923D3D4C443186A88BFD4 /* ChatPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPanelView.swift; sourceTree = "<group>"; };
 		6BC01C372090C7F39FBCFDF3 /* DetectiveMorrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectiveMorrow.swift; sourceTree = "<group>"; };
 		6D417AE360BB53F866CB7979 /* Prophet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prophet.swift; sourceTree = "<group>"; };
+		74479919F919BF7F78E37A3F /* TwitchConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchConfigView.swift; sourceTree = "<group>"; };
 		7AA8F3FF26F6184ABDE196AA /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		8034A643CD20727B49D0B780 /* StoryMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMemory.swift; sourceTree = "<group>"; };
 		82C22B2B861C0DA3739E5321 /* Yael.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yael.swift; sourceTree = "<group>"; };
 		82D01E678D1639B448D1C443 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		86D5F6927A87D1A7559E89D7 /* KoboldAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoboldAI.swift; sourceTree = "<group>"; };
 		87221AE2BDE1CBEA9A129545 /* BusBroadcaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusBroadcaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E3030DD9B409F646296452 /* KoboldOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoboldOverlay.swift; sourceTree = "<group>"; };
+		9E354D79F2537EC88E674249 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		A1DAE59A5351034C59CBB9E3 /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
 		A52388778E4461D0F0D9721B /* AgentCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentCharacter.swift; sourceTree = "<group>"; };
+		AECB21FC8EB4A81FCC600072 /* Governor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Governor.swift; sourceTree = "<group>"; };
 		B0781BEDD36AA40BCE804252 /* KoboldSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoboldSession.swift; sourceTree = "<group>"; };
 		BE4E2205F43271DED286CDD0 /* MoodLegacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLegacy.swift; sourceTree = "<group>"; };
 		C0715302A8F07C72619C5CB7 /* TurnQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnQueue.swift; sourceTree = "<group>"; };
 		D0EDB45AD13CA02B0E4D9DFA /* BehavioralAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehavioralAnalyzer.swift; sourceTree = "<group>"; };
+		DA7978723C9CDBCB97364C99 /* KoboldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoboldItem.swift; sourceTree = "<group>"; };
+		DCC2AECA25328F6E77B5BD58 /* ViewerMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerMessage.swift; sourceTree = "<group>"; };
 		E57DD9B8997546AE894FD915 /* Dolores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dolores.swift; sourceTree = "<group>"; };
+		E7137453B9897CDD7C131FA4 /* WorkActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkActivity.swift; sourceTree = "<group>"; };
 		E7E0391818F8572C037566F0 /* Felix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Felix.swift; sourceTree = "<group>"; };
+		EAB270FAA35BBCC279343CA6 /* WorkPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkPanelView.swift; sourceTree = "<group>"; };
+		EB83B342EBF06780B8E21C23 /* InternalCommView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalCommView.swift; sourceTree = "<group>"; };
 		EBD0D42F2AD39EF982DBE402 /* MoodState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodState.swift; sourceTree = "<group>"; };
 		ECACE559B90DB0E0681E6FA7 /* ApfelSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApfelSession.swift; sourceTree = "<group>"; };
 		F3D2EB434ABAB8FAE0140C8D /* Nadia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nadia.swift; sourceTree = "<group>"; };
 		F448055143C8BD14C4BB87BD /* GameStateBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateBridge.swift; sourceTree = "<group>"; };
+		F9187FAB8171377596393D56 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FBE54539035B517D8BEFD45D /* MoodIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodIndicatorView.swift; sourceTree = "<group>"; };
 		FC571C9D40F63AA304A60ED8 /* MoodRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRegistry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D3DB379BDFBD9CC20902C0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E59176C0EEA6C21CA4D2DA /* Network.framework in Frameworks */,
+				A58345DB2936C9C0E8061EE0 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		21FDFFF72549C021BC4575D2 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				2D6D57EFFACE40EDD4E61173 /* BroadcastWindowView.swift */,
 				035FB4009ACECB1D4A74B3E2 /* ChatMessage.swift */,
 				56D923D3D4C443186A88BFD4 /* ChatPanelView.swift */,
+				EB83B342EBF06780B8E21C23 /* InternalCommView.swift */,
+				4E97B1D422E72DF49E90680A /* KoboldControlPanel.swift */,
+				28AA96AFA8BA99269D608CCF /* TopMenuBarView.swift */,
 				C0715302A8F07C72619C5CB7 /* TurnQueue.swift */,
+				3AE2540438A2F3C195C2EC21 /* TwitchChatBridge.swift */,
+				74479919F919BF7F78E37A3F /* TwitchConfigView.swift */,
+				3B18E3064F3187D09B827B39 /* TwitchKeychainStore.swift */,
+				DCC2AECA25328F6E77B5BD58 /* ViewerMessage.swift */,
+				EAB270FAA35BBCC279343CA6 /* WorkPanelView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -91,17 +152,48 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		525D9196884AFDC64773806F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				4EB0BAEFBBEFB0AC4E5D0864 /* BusPlayer.swift */,
+				15C8EA094201C5EBDAC9DBB7 /* PhraseBank.swift */,
+				A1DAE59A5351034C59CBB9E3 /* SpeechManager.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		53EA6B30C4C297372C8D6D50 /* BusBroadcaster */ = {
 			isa = PBXGroup;
 			children = (
 				E8C4713F72F3294B09A602F0 /* Agents */,
 				4DC589C2B8955E263D06DC89 /* App */,
+				525D9196884AFDC64773806F /* Audio */,
+				A73281EACA24A60390FD6CB5 /* Bridge */,
 				21FDFFF72549C021BC4575D2 /* Chat */,
 				FE69AEB1C2C7CDB9BBC68EFB /* GameState */,
+				6971728956606EADDED14FD6 /* Models */,
 				F3B2D33CF15A6F9A0C681BCD /* Scene */,
 				82CE00AE1D47880251115F5D /* SoulForge */,
 			);
 			path = BusBroadcaster;
+			sourceTree = "<group>";
+		};
+		6971728956606EADDED14FD6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA7978723C9CDBCB97364C99 /* KoboldItem.swift */,
+				E7137453B9897CDD7C131FA4 /* WorkActivity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		822B0562D7B5C1C54BAFE42E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E354D79F2537EC88E674249 /* Network.framework */,
+				F9187FAB8171377596393D56 /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		82CE00AE1D47880251115F5D /* SoulForge */ = {
@@ -132,10 +224,21 @@
 			path = Characters;
 			sourceTree = "<group>";
 		};
+		A73281EACA24A60390FD6CB5 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				229283C7A7200D697BFC467A /* ContentFetcher.swift */,
+				AECB21FC8EB4A81FCC600072 /* Governor.swift */,
+				8034A643CD20727B49D0B780 /* StoryMemory.swift */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
 		C7BF754A498C549D8C6AB283 = {
 			isa = PBXGroup;
 			children = (
 				53EA6B30C4C297372C8D6D50 /* BusBroadcaster */,
+				822B0562D7B5C1C54BAFE42E /* Frameworks */,
 				EA124B8E11E4A63DAA1EF29A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,6 +268,7 @@
 				30E040DCFBEB73087B892FD1 /* CharacterSprite.swift */,
 				89E3030DD9B409F646296452 /* KoboldOverlay.swift */,
 				7AA8F3FF26F6184ABDE196AA /* SceneView.swift */,
+				2CC0787E2BE7904DF01695DA /* VideoPlayerView.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -188,6 +292,7 @@
 			buildConfigurationList = CF20699F38A123503B5F6EFE /* Build configuration list for PBXNativeTarget "BusBroadcaster" */;
 			buildPhases = (
 				A1056E8D6D2F673323BC487E /* Sources */,
+				0D3DB379BDFBD9CC20902C0E /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,17 +347,24 @@
 				BC9137D2FE3EFEA2F6198EE1 /* AgentCharacter.swift in Sources */,
 				DFFA502034BA6831945D84A2 /* ApfelSession.swift in Sources */,
 				EE0B6DE1C0B2744E525145B2 /* BehavioralAnalyzer.swift in Sources */,
+				2E8C1FEB0F4B402C8EAA47EF /* BroadcastWindowView.swift in Sources */,
 				23291264BF6A68BB9C4D138A /* BusBroadcasterApp.swift in Sources */,
+				490DF7F01BBB11D0A9A04F23 /* BusPlayer.swift in Sources */,
 				AEC1249C2DCE0EDF761A345C /* CharacterSprite.swift in Sources */,
 				85ED7C12A54336A1FDB4164E /* ChatMessage.swift in Sources */,
 				811D05544743AF43CCF6BBB9 /* ChatPanelView.swift in Sources */,
+				793D68466C8181FCC17F9958 /* ContentFetcher.swift in Sources */,
 				AB29296A90BA6A78C84039B9 /* ContentView.swift in Sources */,
 				F2570134D58864D96A6198FF /* DetectiveMorrow.swift in Sources */,
 				5C2DD7378C4796AEACD64FEB /* Dolores.swift in Sources */,
 				F2626238D12AC6EAE2B953D3 /* Felix.swift in Sources */,
 				5E31B060DC92328DA89D1D70 /* GameState.swift in Sources */,
 				92819E8D3C988EC07DD3C4B9 /* GameStateBridge.swift in Sources */,
+				35E55A1E73D06F7DF0A6A093 /* Governor.swift in Sources */,
+				D19597D0CB4C305B3EB44D91 /* InternalCommView.swift in Sources */,
 				42C01DAE8C6B4AB7F0E2ACD0 /* KoboldAI.swift in Sources */,
+				78C2A58EA50603CBDD59329F /* KoboldControlPanel.swift in Sources */,
+				E1C84004791609DC0809A61B /* KoboldItem.swift in Sources */,
 				D80E106320B2CAB8888BA083 /* KoboldOverlay.swift in Sources */,
 				9051E431DC2E6337CDA72B03 /* KoboldSession.swift in Sources */,
 				7FB6328E08A8953C693CF3B2 /* Marcus.swift in Sources */,
@@ -262,11 +374,22 @@
 				0082E564B3F23C3CD95A406D /* MoodRegistry.swift in Sources */,
 				0B7C5A45CDE2134FEBEF811B /* MoodState.swift in Sources */,
 				32269AEF3F11B7B15DC7E700 /* Nadia.swift in Sources */,
+				7A83BA8C06742437CDACBF51 /* PhraseBank.swift in Sources */,
 				DD0050AF7B5E02C51DC96FDD /* Priya.swift in Sources */,
 				0C65EFFAC319FE5D602D18BB /* Prophet.swift in Sources */,
 				A7549F4497846E5A2EE6896F /* SceneView.swift in Sources */,
 				487A0E052774C50FB86F9D70 /* Soren.swift in Sources */,
+				61373224764602EADFBA3585 /* SpeechManager.swift in Sources */,
+				210B9DE4C89E2C3C1E9E4F62 /* StoryMemory.swift in Sources */,
+				0C21BC4DF4F2D5CB38F99BEC /* TopMenuBarView.swift in Sources */,
 				F2C1582894DE933106CC3FF1 /* TurnQueue.swift in Sources */,
+				45CD470C79C8EF43C2038640 /* TwitchChatBridge.swift in Sources */,
+				8A74625E9E4143046E40FCB9 /* TwitchConfigView.swift in Sources */,
+				2FB709DDA1DAC1E85F8AE94B /* TwitchKeychainStore.swift in Sources */,
+				195212AF4CC41959B1ADE3D9 /* VideoPlayerView.swift in Sources */,
+				0B9066F3B07EBBE9F58F25D5 /* ViewerMessage.swift in Sources */,
+				4F4409BFD539EAB18053B949 /* WorkActivity.swift in Sources */,
+				076EE530D5A4CEE2EDEA116A /* WorkPanelView.swift in Sources */,
 				58033A6340BC7A94DBAA9579 /* Yael.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,14 +6,12 @@ options:
   xcodeVersion: "16"
   createIntermediateGroups: true
   groupSortPosition: top
-
 settings:
   base:
     SWIFT_VERSION: "5.9"
     MACOSX_DEPLOYMENT_TARGET: "14.0"
     ENABLE_HARDENED_RUNTIME: YES
     SWIFT_STRICT_CONCURRENCY: minimal
-
 targets:
   BusBroadcaster:
     type: application
@@ -26,6 +24,9 @@ targets:
           - "Assets/**"
     resources:
       - path: BusBroadcaster/Assets
+    dependencies:
+      - sdk: Network.framework
+      - sdk: Security.framework
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.busbroadcaster.BusBroadcaster

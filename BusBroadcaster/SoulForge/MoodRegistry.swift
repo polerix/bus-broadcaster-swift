@@ -11,8 +11,10 @@ import Combine
 //     Adjusts valence, arousal, calm, connection, load from game pressures.
 //  2. processSpeech(characterName:text:) — called after each apfel response.
 //     Runs BehavioralAnalyzer on the text and blends results into the mood.
-
 class MoodRegistry: ObservableObject {
+
+    // MARK: - Shared singleton reference (registered by TurnQueue on init)
+    static weak var shared: MoodRegistry?
 
     @Published var moods: [String: MoodState] = MoodRegistry.defaults
 
@@ -31,8 +33,16 @@ class MoodRegistry: ObservableObject {
 
     func mood(for name: String) -> MoodState { moods[name] ?? MoodState() }
 
-    // MARK: - Post-speech behavioral update
+    // MARK: - Viewer command: arousal spike
+    /// Instantly spikes a character's arousal by `delta` (clamped to 0–10).
+    /// Used when Twitch chat rate exceeds threshold (>5 msgs / 10 s).
+    func spike(character: String, arousal delta: Double) {
+        patch(character) { m in
+            m.arousal = min(10, m.arousal + delta)
+        }
+    }
 
+    // MARK: - Post-speech behavioral update
     /// Called by TurnQueue after each apfel stream completes.
     /// Runs BehavioralAnalyzer on the finished text and updates the character's mood.
     func processSpeech(characterName: String, text: String) {
@@ -44,7 +54,6 @@ class MoodRegistry: ObservableObject {
     }
 
     // MARK: - Game-state-driven updates
-
     /// Called by TurnQueue on every GameState change.
     /// Adjusts valence, arousal, calm, connection, load per character.
     func updateFromGameState(_ state: GameState, koboldActive: Bool = false) {

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Wraps `~/bin/apfel --stream` as a subprocess per character.
-/// Writes a combined system+context prompt to stdin, reads streamed tokens from stdout.
+/// Passes system prompt via -s and user context as the positional argument — apfel does NOT read stdin.
 class ApfelSession {
     let character: any AgentCharacter
     private var process: Process?
@@ -12,14 +12,14 @@ class ApfelSession {
         self.character = character
     }
 
-    /// Spawn apfel, stream tokens via `onToken`, call `onComplete` when done.
     func generate(
         context: String,
         gameState: GameState,
+        webContent: String = "",
         onToken: @escaping (String) -> Void,
         onComplete: @escaping () -> Void
     ) {
-        cancel() // kill any previous run
+        cancel()
 
         guard FileManager.default.fileExists(atPath: apfelPath) else {
             onToken("[apfel not found — place binary at ~/bin/apfel]")
@@ -28,24 +28,45 @@ class ApfelSession {
         }
 
         let stateContext = buildStateContext(gameState)
-        let fullPrompt   = "SYSTEM: \(character.systemPrompt)\n\n\(stateContext)\n\n\(context)\n"
+        var webSection = ""
+        if !webContent.isEmpty {
+            webSection = "\n\n[LIVE INTEL — use sparingly, only if relevant to your character's role]\n\(webContent)"
+        }
+        // System prompt: character identity + bus status + live intel
+        let systemPrompt = "\(character.systemPrompt)\n\n\(stateContext)\(webSection)"
+        // User-turn: the conversation context / cue
+        let userPrompt = context
 
-        let proc         = Process()
-        let stdinPipe    = Pipe()
-        let stdoutPipe   = Pipe()
+        let proc       = Process()
+        let stdoutPipe = Pipe()
 
         proc.executableURL  = URL(fileURLWithPath: apfelPath)
-        proc.arguments      = ["--stream"]
-        proc.standardInput  = stdinPipe
+        // apfel --stream takes the prompt as a positional arg; -s sets the system prompt.
+        // --permissive avoids content-filter refusals on edgy radio content.
+        proc.arguments      = ["--stream", "--permissive", "-s", systemPrompt, userPrompt]
+        proc.standardInput  = nil          // apfel does not read stdin
         proc.standardOutput = stdoutPipe
-        proc.standardError  = Pipe() // swallow stderr
+        proc.standardError  = Pipe()       // swallow stderr noise
 
-        // Stream stdout tokens
+        // Guard against double-firing: readabilityHandler (empty data) AND
+        // terminationHandler both dispatch onComplete — we only want one call.
+        let lock = NSLock()
+        var completed = false
+        let fireOnce: () -> Void = {
+            lock.lock()
+            let first = !completed
+            completed = true
+            lock.unlock()
+            if first {
+                stdoutPipe.fileHandleForReading.readabilityHandler = nil
+                DispatchQueue.main.async { onComplete() }
+            }
+        }
+
         stdoutPipe.fileHandleForReading.readabilityHandler = { handle in
             let data = handle.availableData
             if data.isEmpty {
-                stdoutPipe.fileHandleForReading.readabilityHandler = nil
-                DispatchQueue.main.async { onComplete() }
+                fireOnce()
                 return
             }
             if let token = String(data: data, encoding: .utf8) {
@@ -53,17 +74,15 @@ class ApfelSession {
             }
         }
 
-        proc.terminationHandler = { [weak self] _ in
-            stdoutPipe.fileHandleForReading.readabilityHandler = nil
-            DispatchQueue.main.async { onComplete() }
-            self?.process = nil
+        // Do NOT mutate self.process here — doing so while NSTask is on a
+        // background queue causes a setTerminationHandler: crash on dealloc.
+        proc.terminationHandler = { _ in
+            fireOnce()
         }
 
         do {
             try proc.run()
             self.process = proc
-            stdinPipe.fileHandleForWriting.write(Data(fullPrompt.utf8))
-            stdinPipe.fileHandleForWriting.closeFile()
         } catch {
             onToken("[Error launching apfel: \(error.localizedDescription)]")
             onComplete()
@@ -71,11 +90,16 @@ class ApfelSession {
     }
 
     func cancel() {
+        // Clear the handler BEFORE terminate so it doesn't fire on cancellation,
+        // and to avoid NSTask touching a nil'd block during dealloc on BG queue.
+        process?.terminationHandler = nil
+        process?.standardOutput.flatMap { $0 as? Pipe }?
+            .fileHandleForReading.readabilityHandler = nil
         process?.terminate()
         process = nil
     }
 
-    // MARK: - Private helpers
+    deinit { cancel() }
 
     private func buildStateContext(_ gs: GameState) -> String {
         var parts = [
@@ -85,6 +109,6 @@ class ApfelSession {
             "parts=\(Int(gs.parts))%",
         ]
         if let song = gs.currentSong { parts.append("playing: \"\(song)\"") }
-        return "[Game State: \(parts.joined(separator: ", "))]"
+        return "[BUS STATUS: \(parts.joined(separator: ", "))]"
     }
 }

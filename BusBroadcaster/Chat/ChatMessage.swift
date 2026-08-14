@@ -10,9 +10,9 @@ struct ChatMessage: Identifiable, Equatable {
 
     init(character: String, text: String, timestamp: Date = Date(),
          isStreaming: Bool = false) {
-        self.id = UUID()
+        self.id        = UUID()
         self.character = character
-        self.text = text
+        self.text      = text
         self.timestamp = timestamp
         self.isStreaming = isStreaming
     }
@@ -21,24 +21,22 @@ struct ChatMessage: Identifiable, Equatable {
 }
 
 // MARK: - Character Palette
-
 enum CharacterPalette {
     static func color(for name: String) -> Color {
         switch name {
-        case "Dolores":          return Color(hex: "#FF9F45")  // amber dispatch
-        case "Soren":            return Color(hex: "#A8E6CF")  // mint DJ
-        case "Priya":            return Color(hex: "#FFD3B6")  // peach engineer
-        case "Marcus":           return Color(hex: "#DCEDC1")  // pale green driver
-        case "Yael":             return Color(hex: "#FF8B94")  // salmon mechanic
-        case "Felix":            return Color(hex: "#B5EAD7")  // seafoam lookout
-        case "Detective Morrow": return Color(hex: "#C7CEEA")  // periwinkle threat
-        case "Prophet":          return Color(hex: "#E2D2FF")  // lavender vagrant
-        case "Nadia":            return Color(hex: "#FFDAC1")  // cream vendor
-        case "Kobold":           return Color(hex: "#9B7FD4")  // shadow purple
+        case "Dolores":          return Color(hex: "#FF9F45")
+        case "Soren":            return Color(hex: "#A8E6CF")
+        case "Priya":            return Color(hex: "#FFD3B6")
+        case "Marcus":           return Color(hex: "#DCEDC1")
+        case "Yael":             return Color(hex: "#FF8B94")
+        case "Felix":            return Color(hex: "#B5EAD7")
+        case "Detective Morrow": return Color(hex: "#C7CEEA")
+        case "Prophet":          return Color(hex: "#E2D2FF")
+        case "Nadia":            return Color(hex: "#FFDAC1")
+        case "Kobold":           return Color(hex: "#9B7FD4")
         default:                 return Color(hex: "#8B8B8B")
         }
     }
-
     static func hexString(for name: String) -> String {
         switch name {
         case "Dolores":          return "#FF9F45"
@@ -57,7 +55,6 @@ enum CharacterPalette {
 }
 
 // MARK: - Color from hex
-
 extension Color {
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)

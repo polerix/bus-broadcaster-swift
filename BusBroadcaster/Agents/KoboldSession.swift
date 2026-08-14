@@ -2,7 +2,6 @@ import Foundation
 import Combine
 
 // MARK: - KoboldDriver protocol
-
 /// Both AI and human-controlled kobolds implement this.
 protocol KoboldDriver: AnyObject {
     var name: String { get }
@@ -15,7 +14,6 @@ protocol KoboldDriver: AnyObject {
 }
 
 // MARK: - KoboldDriverType enum
-
 enum KoboldDriverType {
     case ai(KoboldAI)
     case human(WebSocketKoboldConnection)
@@ -31,7 +29,6 @@ enum KoboldDriverType {
 }
 
 // MARK: - KoboldAction
-
 enum KoboldAction: Equatable {
     case idle, knock, slipNote, steal, trade
 
@@ -57,24 +54,32 @@ enum KoboldAction: Equatable {
 }
 
 // MARK: - KoboldSession
-
 /// Manages a single Kobold instance: opacity pulse, action state, driver dispatch.
 class KoboldSession: ObservableObject {
-    @Published var isVisible: Bool = false
-    @Published var opacity: Double = 0.18
-    @Published var currentAction: KoboldAction = .idle
+
+    // MARK: Shared singleton reference (set on every init, weak to avoid cycle)
+    static weak var shared: KoboldSession?
+
+    @Published var isVisible:      Bool         = false
+    @Published var opacity:        Double       = 0.18
+    @Published var currentAction:  KoboldAction = .idle
 
     let driverType: KoboldDriverType
-    private var opacityTimer: Timer?
-    private var phase: Double = 0
 
-    // Sine-wave opacity: period 2400ms, range 0.18–0.38
+    /// Set by TurnQueue so that slipNote(_:) can inject text into the chat log.
+    var noteInjectionHandler: ((String) -> Void)?
+
+    private var opacityTimer: Timer?
+    private var phase:        Double = 0
+
+    // Sine-wave opacity: period 2400 ms, range 0.18–0.38
     static let opacityMin  = 0.18
     static let opacityMax  = 0.38
     static let pulsePeriod = 2.4   // seconds
 
     init(driverType: KoboldDriverType) {
         self.driverType = driverType
+        KoboldSession.shared = self   // register as process-wide shared reference
         startOpacityPulse()
     }
 
@@ -114,20 +119,31 @@ class KoboldSession: ObservableObject {
         )
     }
 
+    /// Injects viewer-supplied text directly as a Kobold note, bypassing AI generation.
+    /// Called by TwitchChatBridge for `!request [text]` commands.
+    func slipNote(_ text: String) {
+        guard !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
+        show(action: .slipNote)
+        noteInjectionHandler?(text)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            self?.dismiss()
+        }
+    }
+
     func dismiss() {
-        isVisible = false
+        isVisible     = false
         currentAction = .idle
     }
 
     // MARK: - Private
 
     private func show(action: KoboldAction) {
-        isVisible = true
+        isVisible     = true
         currentAction = action
     }
 
     private func startOpacityPulse() {
-        opacityTimer = Timer.scheduledTimer(withTimeInterval: 1.0/60.0, repeats: true) { [weak self] _ in
+        opacityTimer = Timer.scheduledTimer(withTimeInterval: 1.0 / 60.0, repeats: true) { [weak self] _ in
             guard let self else { return }
             self.phase += (1.0 / 60.0) / Self.pulsePeriod * 2 * .pi
             let t = (sin(self.phase) + 1) / 2
@@ -137,7 +153,6 @@ class KoboldSession: ObservableObject {
 }
 
 // MARK: - WebSocket stub for human-driven kobold
-
 class WebSocketKoboldConnection: KoboldDriver {
     let name: String
     private var task: URLSessionWebSocketTask?

@@ -32,7 +32,7 @@ struct KoboldOverlay: View {
         }
         .onAppear { startPulse() }
         // Show kobolds whenever the turnQueue has a blocking kobold message
-        .onChange(of: turnQueue.messages.count) { _, _ in
+        .onChange(of: turnQueue.messages.count) { _ in
             let hasKobold = turnQueue.messages.last?.character == "Kobold"
             withAnimation { isVisible = hasKobold }
         }
